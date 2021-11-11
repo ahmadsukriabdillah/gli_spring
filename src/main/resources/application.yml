@@ -1,0 +1,22 @@
+spring:
+  mvc:
+    format:
+      date: yyyy-MM-dd
+      date-time: yyyy-MM-dd HH:mm:ss
+      time: HH:mm:ss
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+  sql:
+    init:
+      mode: never
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    password: 1234
+    url: jdbc:postgresql://localhost:5432/test
+    username: postgres
+    driver-class-name: org.postgresql.Driver
+server:
+  port: 8089
